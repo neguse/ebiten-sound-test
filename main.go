@@ -8,7 +8,7 @@ import (
 	// "math"
 	// "math/rand"
 
-	_ "github.com/neguse/ebi/statik"
+	_ "github.com/neguse/ebiten-sound-test/statik"
 	"github.com/rakyll/statik/fs"
 
 	"github.com/hajimehoshi/ebiten"
@@ -91,6 +91,7 @@ func init2() {
 }
 
 func update(screen *ebiten.Image) error {
+	ebitenutil.DebugPrint(screen, fmt.Sprintf("TPS:%2.2f FPS:%2.2f", ebiten.CurrentTPS(), ebiten.CurrentFPS()))
 	// if ebiten.IsKeyPressed(ebiten.KeyLeft) {
 	// 	num--
 	// }
@@ -120,7 +121,6 @@ func update(screen *ebiten.Image) error {
 	// 	screen.DrawImage(ballImage, opt)
 	// }
 
-	ebitenutil.DebugPrint(screen, fmt.Sprintf("TPS:%2.2f FPS:%2.2f", ebiten.CurrentTPS(), ebiten.CurrentFPS()))
 	// ebitenutil.DebugPrint(screen, fmt.Sprintf("TPS:%2.2f FPS:%2.2f\nnum:%d", ebiten.CurrentTPS(), ebiten.CurrentFPS(), num))
 	return nil
 }
