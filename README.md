@@ -2,23 +2,28 @@
 
 ## Build
 
+```
 export GO111MODULE=off
 gopherjs build -o main.js main.go
 GOOS=js GOARCH=wasm go build -o main.wasm main.go
 python serve.py
 open http://localhost:8000/main.html # for wasm version
 open http://localhost:8000/js.html   # for js version
+```
 
 ## License
 
 wasm_exec.jsは、Goのものを利用しています。
 
+```
 // Copyright 2018 The Go Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
+```
 
 damage.wav は、 [go-inovation](https://github.com/hajimehoshi/go-inovation/)のものを利用しています。
 statik.goにも damage.wav ファイルが含まれます。
 
+```
 Copyright 2015 Omega (The original auther)
 Copyright 2015 Haneda3 (JavaScript port)
 Copyright 2015 Hajime Hoshi (Go port)
@@ -40,5 +45,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
 
 それ以外のファイルはご自由に.
